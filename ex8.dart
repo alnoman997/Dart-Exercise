@@ -28,5 +28,18 @@ void main() {
       print("Thanks for playing!");
       break;
     }
+
+    if (!options.contains(userChoice)) {
+      print("Invalid choice.");
+      continue;
+    } else if (compChoice == userChoice) {
+      print("It's a tie! Computer also chose $compChoice.");
+    } else if (rules[compChoice] == userChoice) {
+      print("Computer wins! $compChoice beats $userChoice.");
+      comp += 1;
+    } else if (rules[userChoice] == compChoice) {
+      print("You win! $userChoice beats $compChoice.");
+      user += 1;
+    }
   }
 }

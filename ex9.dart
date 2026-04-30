@@ -27,5 +27,16 @@ guessingGame() {
       print("Please choose a number between 1 and 100.");
       continue;
     }
+
+    if (int.parse(chosenNumber) == randNumber) {
+      print(
+        "Congratulations! You tried $attempt times and guessed the number $randNumber correctly!",
+      );
+      continue;
+    } else if (int.parse(chosenNumber) > randNumber) {
+      print("Too high! Try again.");
+    } else {
+      print("Too low! Try again.");
+    }
   }
 }

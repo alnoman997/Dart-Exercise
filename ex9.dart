@@ -19,5 +19,13 @@ guessingGame() {
     attempt += 1;
     stdout.write("Please chooose a number between 1 and 100: ");
     String chosenNumber = stdin.readLineSync()!;
+
+    if (chosenNumber.toLowerCase() == 'exit') {
+      print("Thanks for plyaing! Goodbye!");
+      break;
+    } else if (int.parse(chosenNumber) > 100) {
+      print("Please choose a number between 1 and 100.");
+      continue;
+    }
   }
 }

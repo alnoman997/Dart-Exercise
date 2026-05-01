@@ -29,6 +29,12 @@ guessingGame() {
       continue;
     }
 
+    int? number = int.tryParse(chosenNumber);
+    if (number == null) {
+      print("Invalid input! Please enter a number.");
+      continue;
+    }
+
     if (int.parse(chosenNumber) == randNumber) {
       print(
         "Congratulations! You tried $attempt times and guessed the number $randNumber correctly!",

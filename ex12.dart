@@ -10,3 +10,12 @@ void main() {
   List<int> result = fibonacciNumbers(chosenNumber);
   print(result);
 }
+
+List<int> fibonacciNumbers(int chosenNumber) {
+  List<int> fibList = [1, 1];
+
+  for (var i = 0; i < chosenNumber; i++) {
+    fibList.add(fibList[i] + fibList[i + 1]);
+  }
+  return fibList;
+}

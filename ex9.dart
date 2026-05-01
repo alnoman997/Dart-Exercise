@@ -12,7 +12,8 @@ void main() {
 
 guessingGame() {
   final random = Random();
-  final randNumber = random.nextInt(100);
+  final randNumber = random.nextInt(100) + 1;
+
   int attempt = 0;
 
   while (true) {

@@ -2,7 +2,6 @@
 // and determine whether the number is prime or not.
 
 import 'dart:io';
-import 'dart:math';
 
 void main() {
   stdout.write("Please enter a number: ");

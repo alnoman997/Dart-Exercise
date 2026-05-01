@@ -10,3 +10,7 @@ void main() {
 
   print(newList(randList));
 }
+
+List<int> newList(List<int> initialList) {
+  return [initialList.first, initialList.last];
+}

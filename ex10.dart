@@ -10,3 +10,14 @@ void main() {
 
   checkPrime(chosenNumber);
 }
+
+void checkPrime(int number) {
+  List<int> a = [
+    for (var i = 1; i <= number; i++)
+      if (number % i == 0) i,
+  ];
+
+  a.length == 2
+      ? print("$number is a prime number.")
+      : print("$number is not a prime number.");
+}

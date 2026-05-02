@@ -26,19 +26,32 @@ void main() {
       break;
     }
 
-theBoard = makeMove(theBoard, user, userChoice);
+    theBoard = makeMove(theBoard, user, userChoice);
 
-if (rowCheck(theBoard)) {
-  print("\nUser $user: Row win!");
-  break;
-} else if (rowCheck(transpose(theBoard))) {
-  print("\nUser $user: Column win!");
-  break;
-} else if (rowCheck(diagonal(theBoard))) {
-  print("\nUser $user: Diagonal win!");
-  break;
-} else if (drawGame(theBoard) == 1) {
-  print("\nGame ended in a draw!");
-  break;
-}
+    if (rowCheck(theBoard)) {
+      print("\nUser $user: Row win!");
+      break;
+    } else if (rowCheck(transpose(theBoard))) {
+      print("\nUser $user: Column win!");
+      break;
+    } else if (rowCheck(diagonal(theBoard))) {
+      print("\nUser $user: Diagonal win!");
+      break;
+    } else if (drawGame(theBoard) == 1) {
+      print("\nGame ended in a draw!");
+      break;
+    }
   }
+  currentBoard(theBoard);
+}
+
+void startGame(List<List<String>> board) {
+  print("""\n
+  Welcome to Tic Tac Toe!
+  The game is for two users: User 1 (X) and User 2 (O).
+  To make a move, give the coordinates of the board separated by space.
+  For instance, 0 0 is the top left corner, 1 1 is the middle cell
+  and 2 2 is the bottom right corner and so on.
+  If you want to quite the game, type exit.
+  """);
+}

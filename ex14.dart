@@ -6,7 +6,7 @@ import 'dart:io';
 
 void main() {
   stdout.write("Please enter a sentence: ");
-  String sentence = stdin.readLineSync();
+  String sentence = stdin.readLineSync() ?? "";
 
   reverseSentence(sentence);
 }

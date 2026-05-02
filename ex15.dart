@@ -34,6 +34,6 @@ void passwordGenerator(String strength) {
   } else if (strength == "strong") {
     shuffleGenerator(20);
   } else {
-    print("Invalid choice. Please choose weak, medium, or strong.");
+    print("Invalid choice.");
   }
 }

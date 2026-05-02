@@ -10,3 +10,7 @@ void main() {
   print("Initial list is $randList");
   print("Cleaned list is ${removeDuplicates(randList)}");
 }
+
+List<int> removeDuplicates(List<int> initialList) {
+  return initialList.toSet().toList();
+}

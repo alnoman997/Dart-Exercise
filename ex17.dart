@@ -20,3 +20,15 @@ void main() {
 
   drawBoard(userChoice);
 }
+
+void drawBoard(int squareSize) {
+  String rowlines = " ---";
+  String colLines = "/   ";
+
+  for (var i = 0; i < squareSize; i++) {
+    print(rowlines * squareSize);
+    print(colLines * squareSize);
+  }
+
+  print("${rowlines * squareSize}\n");
+}

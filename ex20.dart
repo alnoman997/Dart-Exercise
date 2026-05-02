@@ -55,3 +55,14 @@ void startGame(List<List<String>> board) {
   If you want to quite the game, type exit.
   """);
 }
+
+// This function prints the current state of the board .
+
+void currentBoard(List<List<String>> board) {
+  String row1 = "| ${board[0][0]} | ${board[0][1]} | ${board[0][2]} |";
+  String row2 = "| ${board[1][0]} | ${board[1][1]} | ${board[1][2]} |";
+  String row3 = "| ${board[2][0]} | ${board[2][1]} | ${board[2][2]} |";
+  String border = "\n --- --- ---\n";
+
+  print(border + row1 + border + row2 + border + row3 + border);
+}

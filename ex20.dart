@@ -34,7 +34,7 @@ void main() {
     } else if (rowCheck(transpose(theBoard))) {
       print("\nUser $user: Column win!");
       break;
-    } else if (rowCheck(diagonal(theBoard))) {
+    } else if (rowCheck(diagonals(theBoard))) {
       print("\nUser $user: Diagonal win!");
       break;
     } else if (drawGame(theBoard) == 1) {
@@ -94,4 +94,23 @@ List<List<String>> transpose(List<List<String>> board) {
   return [
     for (var i = 0; i < board.length; i++) [for (List<String> r in board) r[i]],
   ];
+}
+
+List<List<String>> diagonals(List<List<String>> board) {
+  return [
+    [for (var i = 0; i < board.length; i++) board[i][i]],
+    [for (var i = 0; i < board.length; i++) board[i].reversed.toList()[i]],
+  ];
+}
+
+int drawGame(List<List<String>> board) {
+  int count = 0;
+  for (var row in board) {
+    for (var e in row) {
+      if (e == " ") {
+        count += 1;
+      }
+    }
+  }
+  return count;
 }

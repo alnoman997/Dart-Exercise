@@ -25,3 +25,15 @@ void shuffleGenerator(int strength) {
   charList.shuffle();
   print("\nYour password is: ${charList.join('')}\n");
 }
+
+void passwordGenerator(String strength) {
+  if (strength == "weak") {
+    shuffleGenerator(5);
+  } else if (strength == "medium") {
+    shuffleGenerator(10);
+  } else if (strength == "strong") {
+    shuffleGenerator(20);
+  } else {
+    print("Invalid choice. Please choose weak, medium, or strong.");
+  }
+}

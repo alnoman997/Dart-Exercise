@@ -42,5 +42,14 @@ void main() {
       print("Incorrect input. Please enter a four digit number.");
       continue;
     }
+
+    for (var i = 0; i < randomNumber.length; i++) {
+      if (chosenNumber![i] == randomNumber[i]) {
+        cows++;
+      } else if (randomNumber.contains(chosenNumber[i])) {
+        bulls++;
+      }
+    }
+    print("\nAttempt $attempts: $cows cows, $bulls bulls\n");
   }
 }

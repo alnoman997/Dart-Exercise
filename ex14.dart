@@ -10,3 +10,8 @@ void main() {
 
   reverseSentence(sentence);
 }
+
+void reverseSentence(String sentence) {
+  String a = sentence.split(" ").reversed.toList().join(" ");
+  print(a);
+}

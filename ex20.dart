@@ -66,3 +66,17 @@ void currentBoard(List<List<String>> board) {
 
   print(border + row1 + border + row2 + border + row3 + border);
 }
+
+// Takes an initial board.
+
+List<List<String>> makeMove(
+  List<List<String>> board,
+  int currentUser,
+  List choice,
+) {
+  var move;
+  currentUser == 1 ? move = 'X' : move = 'O';
+
+  board[int.parse(choice[0])][int.parse(choice[1])] = move;
+  return board;
+}

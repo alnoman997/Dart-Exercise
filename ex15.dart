@@ -17,3 +17,11 @@ void main() {
   String choice = stdin.readLineSync().toLowerCase();
   passwordGenerator(choice);
 }
+
+void shuffleGenerator(int strength) {
+  final random = Random.secure();
+  List<int> intList = List.generate(strength, (_) => random.nextInt(255));
+  List charList = base64lEncode(intList).split('').toList();
+  charList.shuffle();
+  print("\nYour password is: ${charList.join('')}\n");
+}

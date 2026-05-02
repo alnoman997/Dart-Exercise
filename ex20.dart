@@ -25,5 +25,20 @@ void main() {
       print("\nGame quitted int the following state :");
       break;
     }
-  }
+
+theBoard = makeMove(theBoard, user, userChoice);
+
+if (rowCheck(theBoard)) {
+  print("\nUser $user: Row win!");
+  break;
+} else if (rowCheck(transpose(theBoard))) {
+  print("\nUser $user: Column win!");
+  break;
+} else if (rowCheck(diagonal(theBoard))) {
+  print("\nUser $user: Diagonal win!");
+  break;
+} else if (drawGame(theBoard) == 1) {
+  print("\nGame ended in a draw!");
+  break;
 }
+  }

@@ -80,3 +80,18 @@ List<List<String>> makeMove(
   board[int.parse(choice[0])][int.parse(choice[1])] = move;
   return board;
 }
+
+bool rowCheck(List<List<String>> board) {
+  for (List<String> row in board) {
+    if (row.toSet().length == 1 && row.any((e) => e != ' ')) {
+      return true;
+    }
+  }
+  return false;
+}
+
+List<List<String>> transpose(List<List<String>> board) {
+  return [
+    for (var i = 0; i < board.length; i++) [for (List<String> r in board) r[i]],
+  ];
+}

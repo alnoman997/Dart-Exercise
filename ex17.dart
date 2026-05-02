@@ -14,7 +14,7 @@
 import 'dart:io';
 
 void main() {
-  stdout.write("What square size do you want? ");
+  stdout.write("What square size do you want? : ");
   int userChoice = int.parse(stdin.readLineSync() ?? '0');
   print("Here is your ${userChoice} by ${userChoice} game board:\n");
 
@@ -23,7 +23,7 @@ void main() {
 
 void drawBoard(int squareSize) {
   String rowlines = " ---";
-  String colLines = "/   ";
+  String colLines = "|   ";
 
   for (var i = 0; i < squareSize; i++) {
     print(rowlines * squareSize);

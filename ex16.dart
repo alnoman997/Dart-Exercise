@@ -28,7 +28,7 @@ void main() {
     attempts++;
 
     stdout.write("\Please choose a four digit number: ");
-    String? chosenNumber = stdin.readLineSync();
+    String? chosenNumber = stdin.readLineSync() ?? '';
 
     if (chosenNumber == randomNumber) {
       print(

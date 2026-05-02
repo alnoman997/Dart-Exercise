@@ -14,14 +14,14 @@ import 'dart:math';
 
 void main() {
   stdout.write("How strong password do you want? (weak/medium/strong): ");
-  String choice = stdin.readLineSync().toLowerCase();
+  String choice = stdin.readLineSync()?.toLowerCase() ?? '';
   passwordGenerator(choice);
 }
 
 void shuffleGenerator(int strength) {
   final random = Random.secure();
   List<int> intList = List.generate(strength, (_) => random.nextInt(255));
-  List charList = base64lEncode(intList).split('').toList();
+  List charList = base64UrlEncode(intList).split('').toList();
   charList.shuffle();
   print("\nYour password is: ${charList.join('')}\n");
 }

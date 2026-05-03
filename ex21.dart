@@ -26,7 +26,7 @@ void compGuess() {
     count += 1;
 
     stdout.write("\nIs $guess your number?");
-    String? response = stdin.readLineSync().toLowerCase() ?? '';
+    String? response = stdin.readLineSync()?.toLowerCase() ?? "";
 
     if (response == "yes") {
       print("\nI got it! Attempts: $count \n");

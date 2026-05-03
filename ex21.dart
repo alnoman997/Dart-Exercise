@@ -15,3 +15,10 @@ void main() {
 
   compGuess();
 }
+
+void compGuess() {
+  final random = Random();
+  List<int> numbList = List.generate(101, (i) => i);
+  int guess = numList[random.nextInt(numList.length)];
+  int count = 0;
+}

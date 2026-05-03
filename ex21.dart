@@ -10,7 +10,7 @@ void main() {
   Hello! I am your laptop.
   Please think of a number between 0 and 100, and I will try to guess it.
   
-  If my guess is too low, type "low". If I am too high, type "high". If I am correct, type "correct".
+  If my guess is too low, type "low". If I am too high, type "high". If I am correct, type "yes".
   """);
 
   compGuess();

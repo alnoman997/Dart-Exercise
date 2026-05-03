@@ -21,4 +21,22 @@ void compGuess() {
   List<int> numbList = List.generate(101, (i) => i);
   int guess = numList[random.nextInt(numList.length)];
   int count = 0;
+
+  while (true) {
+    count += 1;
+
+    stdout.write("\nIs $guess your number?");
+    String? response = stdin.readLineSync().toLowerCase();
+
+    if (response == "yes") {
+      print("\nI got it! Attempts: $count \n");
+      break;
+    } else if (response == "low") {
+      numList = numList.where((e) => e > guess).toList();
+      guess = numList[random.nextInt(numList.length)];
+    } else if (response == "high") {
+      numList = numList.where((e) => e < guess).toList();
+      guess = numList[random.nextInt(numList.length)];
+    }
+  }
 }

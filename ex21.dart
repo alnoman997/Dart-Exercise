@@ -18,7 +18,7 @@ void main() {
 
 void compGuess() {
   final random = Random();
-  List<int> numbList = List.generate(101, (i) => i);
+  List<int> numList = List.generate(101, (i) => i);
   int guess = numList[random.nextInt(numList.length)];
   int count = 0;
 
@@ -26,7 +26,7 @@ void compGuess() {
     count += 1;
 
     stdout.write("\nIs $guess your number?");
-    String? response = stdin.readLineSync().toLowerCase();
+    String? response = stdin.readLineSync().toLowerCase() ?? '';
 
     if (response == "yes") {
       print("\nI got it! Attempts: $count \n");
